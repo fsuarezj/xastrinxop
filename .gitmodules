@@ -1,9 +1,9 @@
-[submodule "xastrinshop-api"]
-	path = xastrinshop-api
+[submodule "xastrinxop-api"]
+	path = xastrinxop-api
 	url = git@github.com:fsuarezj/xastrinxop-api.git
-[submodule "xastrinshop-ui"]
-	path = xastrinshop-ui
-	url = git@github.com:fsuarezj/xastrinshop-ui.git
+[submodule "xastrinxop-ui"]
+	path = xastrinxop-ui
+	url = git@github.com:fsuarezj/xastrinxop-ui.git
 [submodule "whatsapp_chat_llm"]
 	path = whatsapp_chat_llm
 	url = git@github.com:fsuarezj/whatsapp_chat_llm.git

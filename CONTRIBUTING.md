@@ -1,12 +1,12 @@
-# Contributing to XastrinShop
+# Contributing to Xastrinxop
 
 This platform repo uses **Git submodules**. Each component is an independent repository with its own history, CI, and release cycle.
 
 ## Repository layout
 
 - **xastrinxop** (this repo): docker-compose, docs, cross-service scripts, contract CI
-- **xastrinshop-api** (GitHub: `xastrinxop-api`): Flask REST API
-- **xastrinshop-ui**: React admin dashboard
+- **xastrinxop-api** (GitHub: `xastrinxop-api`): Flask REST API
+- **xastrinxop-ui**: React admin dashboard
 - **whatsapp_chat_llm**: WhatsApp ordering bot
 
 ## Making changes
@@ -14,7 +14,7 @@ This platform repo uses **Git submodules**. Each component is an independent rep
 ### 1. Change code in the component repo
 
 ```bash
-cd xastrinshop-ui          # or api / whatsapp_chat_llm
+cd xastrinxop-ui          # or api / whatsapp_chat_llm
 git checkout -b feature/my-change
 # edit, test
 git add .
@@ -29,13 +29,13 @@ Open a pull request in the **component repository**, not the platform repo.
 After the component change is merged to `main`, update the platform repo to pin the new commit:
 
 ```bash
-cd xastrinshop-ui
+cd xastrinxop-ui
 git checkout main
 git pull
 
 cd ..
-git add xastrinshop-ui
-git commit -m "Bump xastrinshop-ui submodule"
+git add xastrinxop-ui
+git commit -m "Bump xastrinxop-ui submodule"
 git push origin main
 ```
 

@@ -4,13 +4,13 @@ on:
   push:
     branches: [main, staging]
     paths:
-      - "xastrinshop-ui/swagger.json"
+      - "xastrinxop-ui/swagger.json"
       - "scripts/**"
       - ".github/workflows/contract-ci.yml"
   pull_request:
     branches: [main, staging]
     paths:
-      - "xastrinshop-ui/swagger.json"
+      - "xastrinxop-ui/swagger.json"
       - "scripts/**"
 
 jobs:

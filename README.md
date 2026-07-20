@@ -1,13 +1,13 @@
-# XastrinShop Workspace
+# Xastrinxop Workspace
 
-Platform repository orchestrating the XastrinShop components via Git submodules.
+Platform repository orchestrating the Xastrinxop components via Git submodules.
 
 ## Components
 
 | Submodule | Repository | Port |
 |-----------|------------|------|
-| [xastrinshop-api](xastrinshop-api/) | [github.com/fsuarezj/xastrinxop-api](https://github.com/fsuarezj/xastrinxop-api) | 5000 |
-| [xastrinshop-ui](xastrinshop-ui/) | [github.com/fsuarezj/xastrinshop-ui](https://github.com/fsuarezj/xastrinshop-ui) | 5173 |
+| [xastrinxop-api](xastrinxop-api/) | [github.com/fsuarezj/xastrinxop-api](https://github.com/fsuarezj/xastrinxop-api) | 5000 |
+| [xastrinxop-ui](xastrinxop-ui/) | [github.com/fsuarezj/xastrinxop-ui](https://github.com/fsuarezj/xastrinxop-ui) | 5173 |
 | [whatsapp_chat_llm](whatsapp_chat_llm/) | [github.com/fsuarezj/whatsapp_chat_llm](https://github.com/fsuarezj/whatsapp_chat_llm) | 3000 |
 
 ## Clone
@@ -36,13 +36,13 @@ docker compose up --build
 
 ```bash
 # Terminal 1 - API
-cd xastrinshop-api
+cd xastrinxop-api
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 PYTHONPATH=src python run.py
 
 # Terminal 2 - UI
-cd xastrinshop-ui
+cd xastrinxop-ui
 npm install
 npm run dev
 
@@ -64,9 +64,9 @@ Or from the platform root:
 | Task | Command |
 |------|---------|
 | Update all submodules | `git submodule update --remote --merge` |
-| Work on a component | `cd xastrinshop-ui && git checkout -b feature/my-change` |
+| Work on a component | `cd xastrinxop-ui && git checkout -b feature/my-change` |
 | Push a component change | Commit and push inside the submodule directory |
-| Record new submodule SHA | `cd .. && git add xastrinshop-ui && git commit -m "Bump ui submodule"` |
+| Record new submodule SHA | `cd .. && git add xastrinxop-ui && git commit -m "Bump ui submodule"` |
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for the full two-step commit process.
 
@@ -78,7 +78,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for the full two-step commit process.
 ## Architecture
 
 ```
-WhatsApp User -> whatsapp_chat_llm -> xastrinshop-api <- xastrinshop-ui
+WhatsApp User -> whatsapp_chat_llm -> xastrinxop-api <- xastrinxop-ui
                                          |
                                       SQLite/PostgreSQL
 ```
@@ -91,7 +91,7 @@ make test
 
 ## API contract
 
-OpenAPI spec: [xastrinshop-ui/swagger.json](xastrinshop-ui/swagger.json)
+OpenAPI spec: [xastrinxop-ui/swagger.json](xastrinxop-ui/swagger.json)
 
 Regenerate shared types:
 
@@ -105,6 +105,6 @@ If `xastrinxop-api` or this platform repo are not on GitHub yet, create them fir
 
 ```bash
 # On GitHub: create empty repos fsuarezj/xastrinxop-api and fsuarezj/xastrinxop
-cd xastrinshop-api && git push -u origin main
+cd xastrinxop-api && git push -u origin main
 cd .. && git push -u origin main
 ```

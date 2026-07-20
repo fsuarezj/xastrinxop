@@ -1,19 +1,19 @@
 services:
   api:
-    build: ./xastrinshop-api
+    build: ./xastrinxop-api
     ports:
       - "5000:5000"
     env_file:
       - .env
     environment:
       API_PORT: 5000
-      DATABASE_URL: sqlite:////data/xastrinshop.db
+      DATABASE_URL: sqlite:////data/xastrinxop.db
     volumes:
       - api_data:/data
 
   ui:
     build:
-      context: ./xastrinshop-ui
+      context: ./xastrinxop-ui
       args:
         VITE_API_BASE_URL: http://localhost:5000
     ports:

@@ -12,12 +12,12 @@ set -a
 source "${ROOT_DIR}/.env"
 set +a
 
-echo "Starting XastrinShop API on port ${API_PORT:-5000}..."
-(cd "${ROOT_DIR}/xastrinshop-api" && PYTHONPATH=src python run.py) &
+echo "Starting Xastrinxop API on port ${API_PORT:-5000}..."
+(cd "${ROOT_DIR}/xastrinxop-api" && PYTHONPATH=src python run.py) &
 API_PID=$!
 
-echo "Starting XastrinShop UI on port 5173..."
-(cd "${ROOT_DIR}/xastrinshop-ui" && npm run dev) &
+echo "Starting Xastrinxop UI on port 5173..."
+(cd "${ROOT_DIR}/xastrinxop-ui" && npm run dev) &
 UI_PID=$!
 
 echo "Starting WhatsApp bot on port ${BOT_PORT:-3000}..."

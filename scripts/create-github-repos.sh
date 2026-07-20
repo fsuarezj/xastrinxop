@@ -24,12 +24,12 @@ if ! command -v gh >/dev/null 2>&1; then
   echo "  - fsuarezj/xastrinxop-api"
   echo "  - fsuarezj/xastrinxop"
   echo "Then run:"
-  echo "  git -C ${ROOT}/xastrinshop-api push -u origin main"
+  echo "  git -C ${ROOT}/xastrinxop-api push -u origin main"
   echo "  git -C ${ROOT} push -u origin main"
   exit 1
 fi
 
-create_repo "xastrinxop-api" "${ROOT}/xastrinshop-api"
+create_repo "xastrinxop-api" "${ROOT}/xastrinxop-api"
 create_repo "xastrinxop" "${ROOT}"
 
 echo "Done."
