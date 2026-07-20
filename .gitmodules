@@ -1,6 +1,6 @@
 [submodule "xastrinshop-api"]
 	path = xastrinshop-api
-	url = git@github.com:fsuarezj/xastrinshop-api.git
+	url = git@github.com:fsuarezj/xastrinxop-api.git
 [submodule "xastrinshop-ui"]
 	path = xastrinshop-ui
 	url = git@github.com:fsuarezj/xastrinshop-ui.git

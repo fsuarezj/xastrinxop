@@ -5,7 +5,7 @@ This platform repo uses **Git submodules**. Each component is an independent rep
 ## Repository layout
 
 - **xastrinxop** (this repo): docker-compose, docs, cross-service scripts, contract CI
-- **xastrinshop-api**: Flask REST API
+- **xastrinshop-api** (GitHub: `xastrinxop-api`): Flask REST API
 - **xastrinshop-ui**: React admin dashboard
 - **whatsapp_chat_llm**: WhatsApp ordering bot
 

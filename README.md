@@ -6,7 +6,7 @@ Platform repository orchestrating the XastrinShop components via Git submodules.
 
 | Submodule | Repository | Port |
 |-----------|------------|------|
-| [xastrinshop-api](xastrinshop-api/) | [github.com/fsuarezj/xastrinshop-api](https://github.com/fsuarezj/xastrinshop-api) | 5000 |
+| [xastrinshop-api](xastrinshop-api/) | [github.com/fsuarezj/xastrinxop-api](https://github.com/fsuarezj/xastrinxop-api) | 5000 |
 | [xastrinshop-ui](xastrinshop-ui/) | [github.com/fsuarezj/xastrinshop-ui](https://github.com/fsuarezj/xastrinshop-ui) | 5173 |
 | [whatsapp_chat_llm](whatsapp_chat_llm/) | [github.com/fsuarezj/whatsapp_chat_llm](https://github.com/fsuarezj/whatsapp_chat_llm) | 3000 |
 
@@ -101,10 +101,10 @@ make generate-types
 
 ## First-time GitHub setup
 
-If `xastrinshop-api` or this platform repo are not on GitHub yet, create them first:
+If `xastrinxop-api` or this platform repo are not on GitHub yet, create them first:
 
 ```bash
-# On GitHub: create empty repos fsuarezj/xastrinshop-api and fsuarezj/xastrinxop
+# On GitHub: create empty repos fsuarezj/xastrinxop-api and fsuarezj/xastrinxop
 cd xastrinshop-api && git push -u origin main
 cd .. && git push -u origin main
 ```
