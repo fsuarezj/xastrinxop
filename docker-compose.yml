@@ -1,0 +1,38 @@
+services:
+  api:
+    build: ./xastrinshop-api
+    ports:
+      - "5000:5000"
+    env_file:
+      - .env
+    environment:
+      API_PORT: 5000
+      DATABASE_URL: sqlite:////data/xastrinshop.db
+    volumes:
+      - api_data:/data
+
+  ui:
+    build:
+      context: ./xastrinshop-ui
+      args:
+        VITE_API_BASE_URL: http://localhost:5000
+    ports:
+      - "5173:5173"
+    depends_on:
+      - api
+
+  bot:
+    build: ./whatsapp_chat_llm
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    environment:
+      BOT_PORT: 3000
+      SHOP_API_URL: http://api:5000
+      MTN_MOMO_CALLBACK_URL: http://api:5000/api/payments/momo/callback
+    depends_on:
+      - api
+
+volumes:
+  api_data:

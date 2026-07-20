@@ -1,0 +1,38 @@
+name: Contract Check
+
+on:
+  push:
+    branches: [main, staging]
+    paths:
+      - "xastrinshop-ui/swagger.json"
+      - "scripts/**"
+      - ".github/workflows/contract-ci.yml"
+  pull_request:
+    branches: [main, staging]
+    paths:
+      - "xastrinshop-ui/swagger.json"
+      - "scripts/**"
+
+jobs:
+  contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: chmod +x scripts/generate-api-types.sh && ./scripts/generate-api-types.sh
+      - run: git diff --exit-code
+
+  compose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - run: docker compose config
