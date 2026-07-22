@@ -1,0 +1,9 @@
+---
+description: React UI conventions for xastrinxop-ui
+globs: "xastrinxop-ui/src/**/*.{ts,tsx}"
+alwaysApply: false
+---
+
+- Pages live in `src/pages/`; reuse patterns from Products/Orders/Customers pages.
+- Prefer generated types from `src/types/api.generated.ts`.
+- Done means `make test-ui` passes (lint, build, contract).

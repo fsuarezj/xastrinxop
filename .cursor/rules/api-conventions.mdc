@@ -1,0 +1,9 @@
+---
+description: Flask API conventions for xastrinxop-api
+globs: "xastrinxop-api/**/*.py"
+alwaysApply: false
+---
+
+- App factory and routes live under `xastrinxop-api/src/xastrinxop_api/`.
+- Add/extend tests in `xastrinxop-api/tests/test_api.py` using the existing `_login` helper.
+- Run `make test-api` before claiming done.

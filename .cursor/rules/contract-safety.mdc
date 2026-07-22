@@ -1,0 +1,9 @@
+---
+description: Keep OpenAPI contract and generated types in sync
+globs: "**/swagger.json,**/openapi.json,**/api.generated.ts,**/schemas/generated.py,**/namespaces/**/*.py"
+alwaysApply: false
+---
+
+- Source of UI types: `xastrinxop-ui/swagger.json` → `make generate-types`.
+- Do not hand-edit `src/types/api.generated.ts` or API `schemas/generated.py`.
+- If API request/response shapes change, update swagger (and API code), then regenerate.

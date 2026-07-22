@@ -1,0 +1,9 @@
+---
+description: Submodule ownership and two-step commits
+alwaysApply: true
+---
+
+- Edit API/UI/bot code inside the matching submodule directory.
+- Open PRs against the component repo, not the platform, for component work.
+- After a component merge, bump the submodule SHA in the platform with a message like `Bump xastrinxop-ui submodule`.
+- Follow CONTRIBUTING.md.
